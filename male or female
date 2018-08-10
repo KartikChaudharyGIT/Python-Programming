@@ -1,0 +1,15 @@
+from tkinter import *
+def display():
+    print("male:%d,/nfemale:%d" % (var.get(),var1.get()))
+
+
+root=Tk()
+var=IntVar()
+Label(root,text="choose gender:").grid(row = 0)
+Checkbutton(root,text="male",variable = var).grid(row=1)
+var1=IntVar()
+Checkbutton(root,text = "Female",variable = var1).grid(row=2)
+Button(root,text="Quit",command=root.quit).grid(row=3)
+Button(root,text="Submit",command=display).grid(row=4)
+root.mainloop()
+
